@@ -553,6 +553,10 @@ ASSIGN ROLES
 --------------------------------------------------------------
 
 TOMCAT SETUP:
+first go to dlcdn apache org tomcat
+then select version 9 then select latest version on 9 then select bin then select .tar.gz file-->right click and copy link
+wget https://downloads.apache.org/tomcat/tomcat-9/v9.0.112/bin/apache-tomcat-9.0.112.tar.gz
+
 1. wget http://dlcdn.apache.org/tomcat/tomcat-9/v9.0.80/bin/apache-tomcat-9.0.80.tar.gz
 2. tar -zxvf apache-tomcat-9.0.80.tar.gz
 3. vim apache-tomcat-9.0.80/conf/tomcat-users.xml
