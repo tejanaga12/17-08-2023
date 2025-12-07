@@ -469,6 +469,7 @@ HISTORY:
   134  cat raham.yml
   135  sed -i 's/present/absent/g' raham.yml
   136  ansible-playbook raham.yml
+trubleshoot techniques
   137  cd .ssh
   138  ll
   139  cat known_hosts
