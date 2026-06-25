@@ -91,6 +91,12 @@ Note: when we do a iniatl commit the only default branch will be created.
 
 Dev -- > Git (Movies branch) -- > code -- > github
 
+1.what is git and  why we need to use it?
+2.whats are the stages on git and explain them ?
+3.difference blw cvcs and dvcs?
+4.how to check commits in git?
+5.explain branches in git?
+
 
 COMMNDS:
 git branch		: to list the branches
