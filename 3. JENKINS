@@ -167,6 +167,7 @@ NOTE: use server time (utc)
 45 16 9 9 6
 
 38 5 8 9 5
+*/10 5 8 9 5 means it will run every 10 mins
 
 CREATE A CI JOB: Build Triggers -- > Build periodically -- > * * * * * -- > save
 
@@ -192,6 +193,9 @@ Jenkins Dashboard -- > create ci job -- > Build triggers -- > GitHub hook trigge
 
 THROTTLE BUILD: to restrict number of builds per interval.
 create job -- > Throttle builds -- > Number of build: 3 -- > time period: hours -- > save 
+Run Remotely
+configure --> Build Triggers --> Trigger builds remotly (give any name -teja)  bottom of the line URL : JENKINS_URL/job/jenkin/build?token=TOKEN_NAME 
+replace http://18.222.222.38:8080/ob/jenkin/build?token=teja and run this on any browser
 
 make builds and test them
 
