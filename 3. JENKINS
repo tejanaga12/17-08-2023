@@ -230,6 +230,11 @@ Host Key Verification Strategy: last option
 
 DASHBOARD -- > JOB -- > CONFIGURE -- > RESTRTICT WHERE THIS JOB RUN -- > LABEL: SLAVE1 -- > SAVE
 
+by any chance your slave is offline just run the below command
+
+sudo yum install java-21-amazon-corretto -y
+then it will come to online
+
 
 
 LINKED JOBS: 
@@ -569,6 +574,14 @@ TOMCAT SETUP:
 first go to dlcdn apache org tomcat
 then select version 9 then select latest version on 9 then select bin then select .tar.gz file-->right click and copy link
 wget https://downloads.apache.org/tomcat/tomcat-9/v9.0.112/bin/apache-tomcat-9.0.112.tar.gz
+
+first go to dlcdn.apache.org/tomcat/
+then select tomcat-9/  
+after choose the latest version after click bin
+there you can find apache-tomcat-9.0.120.tar.gz  
+givr right click on it and copy link 
+
+wget means web get we are getting from
 
 1. wget http://dlcdn.apache.org/tomcat/tomcat-9/v9.0.80/bin/apache-tomcat-9.0.80.tar.gz
 2. tar -zxvf apache-tomcat-9.0.80.tar.gz
