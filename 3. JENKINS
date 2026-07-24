@@ -640,10 +640,12 @@ A. REPO AND BRANCH CONFIG
 B. SYNTAX
 C. PLUGINS
 
+Incase if you wanna change change port number for tomcat follow this steps you need to do these steps in slave
 
-vim /root/apache-tomcat-9.0.80/conf/server.xml
+vim /root/apache-tomcat-9.0.80/conf/server.xml     -->it will open a open file in that file go to 69 line (:69)  there you can change port number
+sh /root/apache-tomcat-9.0.80/bin/shutdown.sh     #first shutdown , then again restart make apply changes
 sh /root/apache-tomcat-9.0.80/bin/startup.sh
-sh /root/apache-tomcat-9.0.80/bin/shutdown.sh
+
 
 pipeline {
     agent {
