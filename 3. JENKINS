@@ -571,6 +571,9 @@ ASSIGN ROLES
 --------------------------------------------------------------
 
 TOMCAT SETUP:
+
+********************MAIN IMPORTANT RUN THIS STEPS IN SLAVE NODE****************
+
 first go to dlcdn apache org tomcat
 then select version 9 then select latest version on 9 then select bin then select .tar.gz file-->right click and copy link
 wget https://downloads.apache.org/tomcat/tomcat-9/v9.0.112/bin/apache-tomcat-9.0.112.tar.gz
@@ -579,33 +582,45 @@ first go to dlcdn.apache.org/tomcat/
 then select tomcat-9/  
 after choose the latest version after click bin
 there you can find apache-tomcat-9.0.120.tar.gz  
-givr right click on it and copy link 
+give right click on it and copy link 
 
 wget means web get we are getting from
 
-1. wget http://dlcdn.apache.org/tomcat/tomcat-9/v9.0.80/bin/apache-tomcat-9.0.80.tar.gz
-2. tar -zxvf apache-tomcat-9.0.80.tar.gz
-3. vim apache-tomcat-9.0.80/conf/tomcat-users.xml
+1. wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.120/bin/apache-tomcat-9.0.120.tar.gz
+2. tar -zxvf apache-tomcat-9.0.120.tar.gz
+then run the below command  it will open one file in the bottom you can these 3 line copy paste after ---> syumbol and modify as mentioned below and save it 
+3. vim apache-tomcat-9.0.120/conf/tomcat-users.xml
 
   <role rolename="manager-gui"/>
   <role rolename="manager-script"/>
   <user username="tomcat" password="raham123" roles="manager-gui, manager-script"/>
 
-4. vim apache-tomcat-9.0.80/webapps/manager/META-INF/context.xml (delete 21,22)
+after modifying open another fileas mentioned in the number 4  delete line number 21 and 22 (to go to number , enter :21 (click enter it will take u to the 21 st line )for delete press dd
+
+4. vim apache-tomcat-9.0.120/webapps/manager/META-INF/context.xml (delete 21,22)
 5. sh apache-tomcat-9.0.80/bin/startup.sh
 
 public-ip slave:8080
 manager app -- > usrername and passowd
+username :tomcat 
+password :tej
 
 Download pluguin -- > Deploy to container : this is to deploy on tomcat
 
-
-Dashboard
-Manage Jenkins
-Credentials
-System
-Global credentials (unrestricted)
+this need to perform in jenkins
+Dashboard-->
+Manage Jenkins-->
+Credentials -->
+System-->
+Global credentials (unrestricted)-->
 add credentials -- > username and password -- > save
+
+
+
+use this command to check live logs 
+tail -100f /root/apache-tomcat-9.0.120/logs/catalina.2026-07-23.log
+
+to see the files ls -lh /root/apache-tomcat-9.0.120/logs/
 
 http://13.39.49.204:8080/netflix/
 
